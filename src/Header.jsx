@@ -29,6 +29,10 @@ function Header() {
           <NavLink to="/contact" className="main-nav-link">
             Contact
           </NavLink>
+
+          <NavLink to="/submittedcontact" className="main-nav-link">
+            Submitted Contacts
+          </NavLink>
         </nav>
 
         <Profile/>

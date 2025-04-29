@@ -5,7 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-#root{
+#root {
   width: 100vw;
   height: 100vh;
 }
@@ -64,7 +64,9 @@ a {
   opacity: 0;
   transition: all 0.5s ease;
 }
-.main-nav-link:hover::after,.main-nav-link.actives::after,.main-nav-link.active::after {
+.main-nav-link:hover::after,
+.main-nav-link.actives::after,
+.main-nav-link.active::after {
   opacity: 1;
   width: 100%;
 }
@@ -91,7 +93,7 @@ a {
   padding-block: 5px;
   background-color: #adaaaa;
   border-radius: 4px;
-  border-top-right-radius:0px;
+  border-top-right-radius: 0px;
   position: absolute;
   right: 60px;
   top: 40px;
@@ -103,7 +105,7 @@ a {
   /* overflow: hidden; */
 }
 
-.profile-lists.show{
+.profile-lists.show {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
@@ -124,7 +126,6 @@ a {
 .profile-link {
   display: block;
   padding: 5px 10px;
-
 }
 
 .profile-link:hover {
@@ -134,18 +135,20 @@ a {
 /* /////////////////////////////////////////// */
 /* main section */
 /* //////////////////////////////////////////////// */
-.main-section{
+.main-section {
   height: calc(100% - 85px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-td{
+/* /////////////////////////////////////// */
+/* contact component */
+/* /////////////////////////// */
+td {
   padding: 5px 10px;
 }
 
-input[type="text"],select{
+.input {
   padding: 5px 20px 5px 5px;
   width: 100%;
   font-size: 16px;
@@ -153,37 +156,38 @@ input[type="text"],select{
   border-radius: 4px;
   outline: none;
 }
-
-select{
+.contact-table-label-box{
+  display: flex;
+}
+select {
   background-color: transparent;
 }
 
-option{
+option {
   background-color: transparent;
 }
-option:hover{
+option:hover {
   background-color: #244685;
 }
 
-.label{
+.label {
   font-size: 18px;
   font-weight: 500;
 }
 
-
-.contact-inner{
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.095);
+.contact-inner {
+  padding: 20px 50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.095);
 }
-.license{
+.license {
   font-size: 14px;
   color: #595959;
   font-weight: 500;
   letter-spacing: 1px;
 }
-.check-box{
+.check-box {
   margin-right: 10px;
   /* appearance: none;
   position: relative; */
@@ -213,11 +217,11 @@ option:hover{
   transform: rotate(45deg);
 } */
 
-.check-license{
+.check-license {
   left: -10px;
 }
 
-.btn-submit{
+.btn-submit {
   padding: 8px 20px;
   font-size: 14px;
   text-transform: uppercase;
@@ -225,7 +229,7 @@ option:hover{
   font-weight: 600;
   border: none;
   outline: none;
-      background: linear-gradient(to right, #283b4e, #244685, #334563,#3f8af4);
+  background: linear-gradient(to right, #283b4e, #244685, #334563, #3f8af4);
   background-position: 200%;
   background-size: 200%;
   cursor: pointer;
@@ -233,11 +237,11 @@ option:hover{
   transition: all 0.3s ease-in-out;
 }
 
-.btn-submit:hover{
+.btn-submit:hover {
   background-position: right;
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: end;
 }
@@ -248,7 +252,7 @@ option:hover{
   color: white;
   padding: 16px;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   animation: slideDown 0.3s ease-out;
   position: fixed;
@@ -267,3 +271,167 @@ option:hover{
   }
 }
 
+.input.input-error {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+.checkbox-error {
+  outline: 2px solid red;
+}
+.error-msg {
+  padding-top: 4px;
+  font-size: 14px;
+  color: red;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.error-msg.show{
+  opacity: 1;
+  visibility:visible;
+}
+
+/* ///////////////////////////////////////////////////// */
+/* updated contact component */
+/* ///////////////////////////////////////////////////// */
+
+.uc-table {
+  width: 700px;
+  border-spacing: 0;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  text-align: left;
+  overflow: hidden;
+}
+.uc-table thead {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4e4e4e9c;
+  text-transform: uppercase;
+  background-color: #f0f8ff;
+}
+
+.uc-table th, .uc-table td{
+  padding: 10px;
+}
+.uc-table th,
+.uc-table td{
+  border-bottom: 1px solid #dfdfdf; 
+}
+.uc-table tbody tr:hover{
+  background-color: #cadbfa9c;
+  cursor: pointer;
+}
+
+/* ////////////////////////////////////////// */
+/* contact details */
+/* ///////////////////////////////////////// */
+.contact-detail-container,.edit-contact-container{
+  max-width: 900px;
+  width: 80%;
+  padding: 40px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.213);
+}
+
+.action-container{
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.btn-action{
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.btn-edit,.btn-save{
+  /* background-color: #c3fae8; */
+  border-color: #087f5b;
+  color: #087f5b;
+  margin-right: 10px;
+}
+.btn-back{
+  /* background-color: #d0ebff; */
+  border-color: #1864ab;
+  color: #1864ab;
+}
+.btn-delete{
+  /* background-color: #ffe3e3; */
+  border-color: #c92a2a;
+  color: #c92a2a;
+}
+.btn-edit:hover,.btn-back:hover,.btn-save:hover,.btn-delete:hover{
+  color: #fff;
+
+}
+.btn-edit:hover,.btn-save:hover{
+  background-color: #087f5b;
+}
+.btn-back:hover{
+  background-color: #1864ab;
+}
+.btn-delete:hover{
+  background-color: #c92a2a;
+}
+
+
+
+
+.contact-detail-lists{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-detail-list{
+  display: flex;
+}
+.contact-detail-left,.contact-detail-right{
+  flex: 0 0 50%;
+}
+
+.contact-label{
+  padding-left: 25px;
+  font-size: 18px;
+  font-family: monospace;
+  letter-spacing: 1.1px;
+  font-weight: 400;
+}
+
+/* edit contact */
+
+.edit-contact-container{
+  max-width: 500px;
+  width: 50%;
+}
+.edit-contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.edit-contact-input-container{
+  display: flex;
+  gap: 5px;
+}
+.edit-contact-input-container div{
+  flex: 0 0 30%;
+}
+
+.btn-save{
+  margin-top: 30px;
+  background-color: #fff;
+}
